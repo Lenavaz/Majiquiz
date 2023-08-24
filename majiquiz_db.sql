@@ -19,6 +19,50 @@
 CREATE DATABASE IF NOT EXISTS `majiquiz_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `majiquiz_db`;
 
+-- Dumping structure for table majiquiz_db.migrations
+CREATE TABLE IF NOT EXISTS `migrations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(255) NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table majiquiz_db.migrations: ~4 rows (approximately)
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+	(3, '2014_10_12_000000_create_users_table', 1),
+	(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+	(5, '2014_10_12_100000_create_password_resets_table', 2),
+	(6, '2023_08_23_173029_create_scores_table', 2);
+
+-- Dumping structure for table majiquiz_db.password_resets
+CREATE TABLE IF NOT EXISTS `password_resets` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table majiquiz_db.password_resets: ~0 rows (approximately)
+
+-- Dumping structure for table majiquiz_db.personal_access_tokens
+CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `tokenable_type` varchar(255) NOT NULL,
+  `tokenable_id` bigint(20) unsigned NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `token` varchar(64) NOT NULL,
+  `abilities` text DEFAULT NULL,
+  `last_used_at` timestamp NULL DEFAULT NULL,
+  `expires_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
+  KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table majiquiz_db.personal_access_tokens: ~0 rows (approximately)
+
 -- Dumping structure for table majiquiz_db.questions
 CREATE TABLE IF NOT EXISTS `questions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -305,6 +349,71 @@ INSERT INTO `questions` (`id`, `category`, `difficulty`, `question`, `correct_an
 	(268, 'Movies', 'Hard', 'What is the name of Riley\'s imaginary friend in Inside Out?', 'Bing Bong', 'King Kong', 'Ding Dong', 'Sing Song'),
 	(269, 'Movies', 'Hard', ' For what movie did George Clooney win his sole acting Oscar to date?', 'Syriana ', 'The Descendants', 'Gravity', 'Fantastic Mr. Fox'),
 	(270, 'Movies', 'Hard', 'Who played Regan MacNeil in The Exorcist?', 'Linda Blair', 'Linda Cardellini', 'Linda Fiorentino', 'Linda Evans');
+
+-- Dumping structure for table majiquiz_db.scores
+CREATE TABLE IF NOT EXISTS `scores` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `difficulty` varchar(255) NOT NULL,
+  `score` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `scores_user_id_foreign` (`user_id`),
+  CONSTRAINT `scores_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table majiquiz_db.scores: ~29 rows (approximately)
+INSERT INTO `scores` (`id`, `user_id`, `category`, `difficulty`, `score`, `created_at`, `updated_at`) VALUES
+	(1, 1, 'General Knowledge', 'Easy', 27, '2023-08-23 17:16:24', '2023-08-23 17:16:24'),
+	(2, 3, 'Programming', 'Easy', 13, '2023-08-23 17:22:38', '2023-08-23 17:22:38'),
+	(3, 4, 'Science', 'Hard', 13, '2023-08-24 09:35:51', '2023-08-24 09:35:51'),
+	(4, 4, 'Science', 'Hard', 13, '2023-08-24 09:36:07', '2023-08-24 09:36:07'),
+	(5, 4, 'Music', 'Medium', 20, '2023-08-24 09:37:38', '2023-08-24 09:37:38'),
+	(6, 4, 'Movies', 'Easy', 60, '2023-08-24 09:38:22', '2023-08-24 09:38:22'),
+	(7, 1, 'Geography', 'Medium', 20, '2023-08-24 09:38:55', '2023-08-24 09:38:55'),
+	(8, 1, 'Sports', 'Hard', 13, '2023-08-24 09:39:13', '2023-08-24 09:39:13'),
+	(9, 3, 'Programming', 'Medium', 47, '2023-08-24 09:39:50', '2023-08-24 09:39:50'),
+	(10, 3, 'World history', 'Hard', 29, '2023-08-24 09:40:11', '2023-08-24 09:40:11'),
+	(11, 3, 'World history', 'Hard', 50, '2023-08-24 09:40:26', '2023-08-24 09:40:26'),
+	(12, 3, 'Riddles', 'Easy', 20, '2023-08-24 09:40:39', '2023-08-24 09:40:39'),
+	(13, 3, 'Riddles', 'Hard', 33, '2023-08-24 09:41:05', '2023-08-24 09:41:05'),
+	(14, 4, 'Programming', 'Medium', 0, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(15, 3, 'Riddles', 'Easy', 98, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(16, 2, 'World History', 'Hard', 77, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(17, 3, 'Sports', 'Medium', 45, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(18, 1, 'Movies', 'Easy', 65, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(19, 3, 'Science', 'Hard', 34, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(20, 2, 'General Knowledge', 'Medium', 83, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(21, 4, 'Music', 'Easy', 28, '2023-08-24 09:42:38', '2023-08-24 09:42:38'),
+	(22, 1, 'General Knowledge', 'Easy', 7, '2023-08-24 10:24:04', '2023-08-24 10:24:04'),
+	(23, 1, 'Riddles', 'Easy', 7, '2023-08-24 10:38:06', '2023-08-24 10:38:06'),
+	(24, 1, 'General Knowledge', 'Easy', 13, '2023-08-24 12:46:25', '2023-08-24 12:46:25'),
+	(25, 5, 'General Knowledge', 'Easy', 0, '2023-08-24 12:54:17', '2023-08-24 12:54:17'),
+	(26, 5, 'General Knowledge', 'Easy', 7, '2023-08-24 12:59:17', '2023-08-24 12:59:17'),
+	(27, 5, 'General Knowledge', 'Easy', 13, '2023-08-24 13:07:38', '2023-08-24 13:07:38'),
+	(28, 5, 'General Knowledge', 'Easy', 0, '2023-08-24 13:07:46', '2023-08-24 13:07:46'),
+	(29, 5, 'General Knowledge', 'Easy', 0, '2023-08-24 13:30:25', '2023-08-24 13:30:25');
+
+-- Dumping structure for table majiquiz_db.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_username_unique` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table majiquiz_db.users: ~5 rows (approximately)
+INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `updated_at`) VALUES
+	(1, 'Nuno', '$2y$10$hO0L8phWpCf.Q9dV.TPOceMjy1W2xIyE3FQNIiEezgQM26RS5/rVK', '2023-08-23 13:53:29', '2023-08-23 13:53:29'),
+	(2, 'Joao', '$2y$10$KcKBx79hA3lEg6V6HekqSOD0tHTIHgTTA263etTQSGPk2lh3ReYaK', '2023-08-23 13:55:40', '2023-08-23 13:55:40'),
+	(3, 'Maria', '$2y$10$r7aN2l1TIojF1AnHwEFmse.2EpiejtuOgjjheQiCnwJvxgDMb3IcC', '2023-08-23 13:58:01', '2023-08-23 13:58:01'),
+	(4, 'Tomas', '$2y$10$lBWOq1NmqMjMHzyyjdkhsuYZnc44ZCN6E8CDMp4xBn/vv0bl0QShq', '2023-08-24 09:35:39', '2023-08-24 09:35:39'),
+	(5, 'Ines', '$2y$10$OB5P7k8L3MZPBuJLwZiNLu/OjnSYzqZB1RWAEbWtUXMR17Dz3ly1a', '2023-08-24 12:46:55', '2023-08-24 12:46:55');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
