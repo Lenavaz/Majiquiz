@@ -8,5 +8,5 @@ Após fazer pull/clonar projeto:
 Depois correr "npm run dev" e "php artisan serve" e testar se fundo é cor de rosa.
 
 Para continuar a editar a stylesheet há 2 opcoes:
-- Editar em resources/sass/app.scss e fazer npm mix para que /public/css seja atualizado.
+- Editar em resources/sass/app.scss e fazer npx mix para que /public/css seja atualizado.
 - Editar diretamente em /public/css (código da stylesheet está no final do ficheiro).
