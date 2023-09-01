@@ -1,6 +1,6 @@
 @extends('layouts.layout')
-
 @section('content')
+
 <div class="container">
     <header>
         <div class="page-header min-vh-1 pb-md-5 absolute">

@@ -9,15 +9,15 @@
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     {{-- Your custom CSS --}}
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sass/sapp.css') }}" rel="stylesheet">
 </head>
 <body>
 
 <div class="container mt-5">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-white bg-light">
         <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/img/logo.jpg" alt="logo" width="100" height="100" class="d-inline-block align-text-md-center">
+                <img src="/img/logo.jpg" alt="logo" width="80" height="80" class="d-inline-block align-text-md-center">
                 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

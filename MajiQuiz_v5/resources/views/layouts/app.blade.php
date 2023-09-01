@@ -17,7 +17,8 @@
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
    
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sass/app.css') }}" rel="stylesheet">
+    
    
 </head>
 
@@ -58,9 +59,13 @@
   <hr class="my-2">
   <p>Grab your thinking cap and a side of laughter, because at MajiQuiz, learning is the name of the game, and giggles are the bonus points!</p>
   <p class="lead">
-    <a class="btn btn-warning btn-lg" href="{{ route('select-quiz') }}" role="button">Let's Start!</a>
+    <a class="btn btn-warning btn-lg" href="{{ route('select-quiz') }}" role="button">Try it out!</a>
   </p> --}}
 </div>
+
+<br>
+<br>
+<br>
 </div>
 
     <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">

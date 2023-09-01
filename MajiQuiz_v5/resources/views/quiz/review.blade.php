@@ -1,7 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="container">
+
+    <div class="container background-image-page">
         <h1>Review: {{ $category }} - {{ $difficulty }}</h1>
         <h2>Score: {{ $correctCount }}/{{ count($questions) }} ({{ $score }}%) {{ $medal }}</h2>
 
@@ -52,6 +53,10 @@
                         </p>
                     @endforeach
                 </div>
+                <br>
+            <br>
+            <br>
+            <br>
             </div>
         @endforeach
 

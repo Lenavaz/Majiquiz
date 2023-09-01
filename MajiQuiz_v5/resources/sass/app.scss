@@ -11,9 +11,39 @@
 
 // STYLESHEET AQUI
 
+@import 'css/app.css';
+
 .pinkjumbotron {
     background-color: #ebb8e9;
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: 0.3rem;
 }
+
+/* Estilo padrão do botão */
+.btn-primary {
+    background-color: blue; /* Cor padrão (azul) */
+    color: white; /* Cor do texto (branco) */
+  }
+  
+  /* Estilo quando o botão está em hover (mouse sobre ele) */
+  .btn-primary:hover {
+    background-color: rgb(85, 164, 180); /* Cor amarela quando o botão é hover */
+  }
+  
+  /* Estilo quando o botão está ativo (clicado) */
+  .btn-primary:active {
+    background-color: rgb(139, 87, 161); /* Cor vermelha quando o botão é clicado */
+  }
+  
+  
+  
+  .background-image-page {
+    background-image: url('img/fundo.jpg');
+    background-size: cover;
+  }
+  
+  
+    .navbar {
+        background-color: #def3e9;
+    }  

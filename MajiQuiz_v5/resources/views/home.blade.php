@@ -74,3 +74,4 @@
 <script src="{{ asset('assets/js/soft-design-system.min.js?v=1.0.9') }}" type="text/javascript"></script>
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('css/sass/app.css') }}"></script>

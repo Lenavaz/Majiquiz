@@ -64,7 +64,7 @@
                                     <h5 class="card-title" style="text-align:center"><b>Sports</b></h5>
                                     <p class="card-text">Gear up for victory in our Sports knowledge quiz!</p>
                                     {{-- <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Sports')">Sports</button> --}}
-                                    <button type="button" class="btn active btn-block" data-bs-toggle="button" aria-pressed="true" onclick="selectCategory('Sports')"><b>Sports</b></button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Sports')"><b>Sports</b></button>
 
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
                             <div class="card">
                                 <img src="./img/easy.png" class="card-img-top" alt="Imagem 1">
                                 <div class="card-img-overlay overlay-container">
-                                    <button type="button" class="btn btn-primary btn-overlay" onclick="selectDifficulty('Easy')">A bit Brave</button>
+                                    <button type="button" class="btn btn-primary btn-overlay" onclick="selectDifficulty('Easy')">A bit Brave - Let's take it EASY!</button>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                             <div class="card">
                                 <img src="./img/medium.png" class="card-img-top" alt="Imagem 2">
                                 <div class="card-img-overlay overlay-container">
-                                    <button type="button" class="btn btn-primary btn-overlay" onclick="selectDifficulty('Medium')">Regular Brave</button>
+                                    <button type="button" class="btn btn-primary btn-overlay" onclick="selectDifficulty('Medium')">Regular Brave - MEDIUM please!</button>
                                 </div>
                             </div>
                         </div>
@@ -166,16 +166,16 @@
                             <div class="card">
                                 <img src="./img/hard.png" class="card-img-top" alt="Imagem 3">
                                 <div class="card-img-overlay overlay-container">
-                                    <button type="button" class="btn btn-primary btn-overlay" onclick="selectDifficulty('Hard')">Super Brave</button>
+                                    <button type="button" class="btn btn-primary btn-overlay" onclick="selectDifficulty('Hard')">Super Brave - Let's get HARD!</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-lg btn-primary">Start Quiz</button>
-            <a href="{{ route('select-quiz') }}" class="btn btn-lg btn-secondary">Cancel</a>
+            <div class="d-grid gap-2 justify-content-end">
+            <button type="submit" class="btn btn-lg col-lg-6 btn-primary ml-5" data-toggle="button" aria-pressed="false" autocomplete="off">Start Quiz</button>
+            <a href="{{ route('select-quiz') }}" class="btn btn-lg col-lg-5  btn-secondary ml-3" data-toggle="button" aria-pressed="false" autocomplete="off">Cancel</a>
             </div>
             <br>
             <br>

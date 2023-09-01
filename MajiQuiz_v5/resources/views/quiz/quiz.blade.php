@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="container">
+<div class="container background-image-page">
         <h1>{{ $category }} - {{ $difficulty }}</h1>
 
         <form action="{{ route('submit-quiz') }}" method="post">
@@ -51,5 +51,9 @@
             <button type="submit" class="btn btn-primary mb-3">Submit Answers</button>
             <a href="{{ route('home') }}" class="btn btn-secondary mb-3">Cancel Quiz</a>
         </form>
+        <br>
+            <br>
+            <br>
+            <br>
     </div>
 @endsection

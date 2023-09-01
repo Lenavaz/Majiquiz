@@ -2,7 +2,19 @@
 
 @section('content')
 
-<div class="container mt-5">
+<div class="container">
+    <header>
+        <div class="page-header min-vh-1 pb-md-3 absolute">
+            <container class="container">
+                <div class="d-flex align-items-center justify-content-center min-vh-80 pb-md-1 ">
+                <img src="./img/comp.jpg" alt="competitions" class="img-fluid" style="max-height: 400px; margin: 20px 0;">
+                </div>
+            </container>
+        </div>
+    </header>
+
+
+<div class="container mt-5 background-image-page">
     <h2>Leaderboard</h2>
     
     {{-- dropdowns para filtrar tabela --}}
@@ -79,6 +91,19 @@
         </tbody>
     </table>
 </div>
+
+<div class="container" class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="jumbotron text-center mx-auto ">
+  <h3 class="display-5">"Winning isn't everything, but wanting to win is."</h3>
+  <p class="lead"> Vince Lombardi</p>
+
+    <hr class="my-2">
+
+</div>
+
+<br>
+  <br>
+  <br>
 
 {{-- 
     permite reter opcoes que utilizador selecionou no dropdown apos o form ser submetido e a pagina ser recarregada ao clicar no botao "Filter".
