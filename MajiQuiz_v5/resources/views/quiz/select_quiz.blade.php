@@ -33,7 +33,7 @@
             {{-- Opções de categoria --}}
             <div class="card text-white bg-info mb-5">
                 <div class="card-body">
-                    <h2 class="card-title">What's Your flavour?</h2>
+                    <h2 class="card-title">STEP 1 - What's Your flavour?</h2>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card" style="max-width: 18rem;">
@@ -139,7 +139,7 @@
             
             {{-- Opções de dificuldade --}}
             <div class="card text-white bg-warning mb-5" >
-                <h2 class="card-header">How Brave Are You?!</h2>
+                <h2 class="card-header">STEP 2 - How Brave Are You?!</h2>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4">
@@ -171,9 +171,14 @@
                     </div>
                 </div>
             </div>
-                    
+            <div class="d-grid gap-2">
             <button type="submit" class="btn btn-lg btn-primary">Start Quiz</button>
             <a href="{{ route('select-quiz') }}" class="btn btn-lg btn-secondary">Cancel</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
         </form>
     </div>
 </div>

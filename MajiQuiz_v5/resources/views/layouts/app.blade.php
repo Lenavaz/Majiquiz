@@ -27,9 +27,9 @@
   <container class="container">
     <div class="position-absolute w-100 z-index-1 top-0">
     <div class="d-flex align-items-center justify-content-center min-vh-100 pb-md-5">
-      <div class="text-center">
+      <div class="text-center " >
           <h1 class="text-white text-bold pt-10 mt-n5 display-1">MajiQuiz</h1>
-          <p class="lead text-white mt-n5 fs-1">Unlocking Knowledge, One Question at a Time! <br/> Dive into Wisdom! </p>
+          <p class="lead text-light mt-n5 fs-1">Unlocking Knowledge, One Question at a Time! <br/> Dive into Wisdom! </p>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="img/logo.jpg" alt="logo" width="40" height="40" class="d-inline-block align-text-top">
+                <img src="img/logo.jpg" alt="logo" width="80" height="80" class="d-inline-block align-text-top">
             </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -84,13 +84,13 @@
                         @guest
                             @if (Route::has('login'))
                             <li class="nav-item ms-3">
-                                    <a class="btn btn-outline-primary btn-rounded" href="{{ route('login') }}">{{ __('Log in') }}</a>
+                                    <a class="btn btn-lg btn-outline-primary btn-rounded" href="{{ route('login') }}">{{ __('Log in') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="btn btn-outline-info btn-rounded" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="btn btn-lg sbtn-outline-info btn-rounded" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -108,6 +108,9 @@
 
         <main class="py-4">
             @yield('content')
+            <br>
+            <br>
+            <br>
         </main>
     </div>
 </body>

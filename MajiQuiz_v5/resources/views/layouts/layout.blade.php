@@ -17,8 +17,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/img/logo.jpg" alt="logo" width="40" height="40" class="d-inline-block align-text-md-center">
-                This is MajiQuiz!!!!
+                <img src="/img/logo.jpg" alt="logo" width="100" height="100" class="d-inline-block align-text-md-center">
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -27,16 +27,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto mr-5">
                     <li class="nav-item">
-                    <a type="button" class="btn btn-outline-warning" href="{{ route('leaderboard') }}">Leaderboard</a>
+                    <a type="button" class="btn btn-lg btn-outline-warning" href="{{ route('leaderboard') }}">Leaderboard</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     @guest
                     <li class="nav-item">
-                    <a class="btn btn-outline-primary btn-rounded" href="{{ route('login') }}">Login</a>
+                    <a class="btn btn-outline-primary btn-lg btn-rounded" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                    <a class="btn btn-outline-info btn-rounded" href="{{ route('register') }}">Register</a>
+                    <a class="btn btn-outline-info btn-lg btn-rounded" href="{{ route('register') }}">Register</a>
                     </li>
                     @else
                     <li class="nav-item">

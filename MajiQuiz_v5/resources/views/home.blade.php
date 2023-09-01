@@ -2,7 +2,7 @@
   
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" >
         <h1 class="display-1" style="text-align:center">Hello, There!</h1>
                 <p class ="lead" style="text-align:center">Get ready to flex those brain muscles and embrace the wild world of MajiQuiz! We're not just here to tickle your funny bone, but to challenge your noodle with mind-boggling questions and brain-teasing riddles. </p>
                 <hr class="my-2">
