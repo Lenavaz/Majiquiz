@@ -63,7 +63,9 @@
                                 <div class="card-body text-primary">
                                     <h5 class="card-title" style="text-align:center"><b>Sports</b></h5>
                                     <p class="card-text">Gear up for victory in our Sports knowledge quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Sports')">Sports</button>
+                                    {{-- <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Sports')">Sports</button> --}}
+                                    <button type="button" class="btn active btn-block" data-bs-toggle="button" aria-pressed="true" onclick="selectCategory('Sports')"><b>Sports</b></button>
+
                                 </div>
                             </div>
                         </div>
