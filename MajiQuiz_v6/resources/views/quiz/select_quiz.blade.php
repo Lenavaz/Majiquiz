@@ -39,10 +39,9 @@
                         <div class="col-md-4">
                             <div class="card" style="max-width: 18rem;">
                                 <img class="card-img-top" src="./img/genk.jpg" alt="Card image cap">
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>General Knowledge</b></h5>
+                                <div class="card-body text-primary">                                    
                                     <p class="card-text">Test your wits with our diverse General Knowledge quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('General Knowledge')">General Knowledge</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('General Knowledge')"><b>General Knowledge</b></button>
                                 </div>
                             </div>
                         </div>
@@ -51,9 +50,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/geo.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>Geography</b></h5>
                                     <p class="card-text">Explore the world through our Geography quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Geography')">Geography</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Geography')"><b>Geography</b></button>
                                 </div>
                             </div>
                         </div>
@@ -62,11 +60,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/sports.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>Sports</b></h5>
                                     <p class="card-text">Gear up for victory in our Sports knowledge quiz!</p>
-                                    {{-- <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Sports')">Sports</button> --}}
                                     <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Sports')"><b>Sports</b></button>
-
                                 </div>
                             </div>
                         </div>
@@ -75,9 +70,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/prog.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>Programming</b></h5>
                                     <p class="card-text">Code your way to victory in our Programming quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Programming')">Programming</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Programming')"><b>Programming</b></button>
                                 </div>
                             </div>
                         </div>
@@ -86,9 +80,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/whist.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>World History</b></h5>
                                     <p class="card-text">Travel through time with our World History quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('World History')">World History</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('World History')"><b>World History</b></button>
                                 </div>
                             </div>
                         </div>
@@ -97,9 +90,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/quizz.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>Riddles</b></h5>
                                     <p class="card-text">Challenge your mind with our mind-bending Riddles quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Riddles')">Riddles</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Riddles')"><b>Riddles</b></button>
                                 </div>
                             </div>
                         </div>
@@ -108,9 +100,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/science.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>Science</b></h5>
                                     <p class="card-text">Unlock the secrets of the universe with our Science quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Science')">Science</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Science')"><b>Science</b></button>
                                 </div>
                             </div>
                         </div>
@@ -119,9 +110,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/music.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>Music</b></h5>
                                     <p class="card-text">Harmonize your knowledge in our Music quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Music')">Music</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Music')"><b>Music</b></button>
                                 </div>
                             </div>
                         </div>
@@ -130,9 +120,8 @@
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="./img/movies.jpg" alt="Card image cap">
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" style="text-align:center"><b>Movies</b></h5>
                                     <p class="card-text">Test your cinematic expertise with our Movies quiz!</p>
-                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Movies')">Movies</button>
+                                    <button type="button" class="btn btn-primary btn-block" onclick="selectCategory('Movies')"><b>Movies</b></button>
                                 </div>
                             </div>
                         </div>  
